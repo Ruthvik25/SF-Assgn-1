@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    background-color: crimson;
+
+}
+
+.container {
+    max-width: 65em;
+    margin: 5rem auto;
+    background-color: #E34A3B;
+}
+
+header {
+    height: 4rem;
+}
+
+.nh3 {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    margin: 0.5rem 1.5rem;
+    padding: 0.5rem;
+    border: 2px solid white;
+    color: white;
+}
+
+.box {
+    display: flex;
+
+}
+
+.nav {
+    background-color: #10181F;
+
+    flex: 0 0 20%;
+    height: 615px;
+}
+
+.list li a {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.list li a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #F8E114;
+    transition: width 1s;
+}
+
+.list li a:hover::before {
+    width: 100%;
+    color: #10181F;
+}
+
+.list ul {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.list li a:link,
+.list li a:visited {
+    color: cornsilk;
+    position: relative;
+    z-index: 100;
+}
+
+.list li a:hover,
+.list li a:active {
+    color: #10181F;
+}
+
+main {
+    flex: 1;
+    background-color: lavenderblush;
+}
+
+#man-p-1,
+#man-p-2,
+#man-p-3,
+#linkedin {
+    animation: moveLeft 4s ease-out;
+}
+
+@keyframes moveLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
